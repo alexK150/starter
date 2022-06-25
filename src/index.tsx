@@ -1,6 +1,15 @@
-import React from "react";
-import ReactDOM from "react-dom";
+import React from 'react';
+import ReactDOM from 'react-dom';
+import {BrowserRouter as Router} from 'react-router-dom';
 
-import App from "./App";
+import App from './App';
+import AuthProvider from './auth/AuthProvider';
 
-ReactDOM.render(<App />, document.getElementById("root"));
+ReactDOM.render(
+    <Router>
+        <AuthProvider>
+            <App />
+        </AuthProvider>
+    </Router>,
+    document.getElementById('root')
+);
