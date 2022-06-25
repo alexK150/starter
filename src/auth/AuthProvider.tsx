@@ -16,6 +16,7 @@ const AuthProvider = (props: PropsWithChildren<{}>) => {
             clientId={authConfig.auth0ClientId}
             redirectUri={window.location.origin}
             onRedirectCallback={onRedirectCallback}
+
         >
             {props.children}
         </Auth0Provider>
